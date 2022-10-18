@@ -12,6 +12,6 @@ $id_profissional = $_GET['id_profissional'];
 
 mysqli_query($con,"delete from profissional where id_profissional=$id_profissional");
 
-header("location: ../folguista");
+header("location: /tcc/logout/");
 
 ?>

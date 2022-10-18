@@ -12,14 +12,13 @@ include '../conexao.php';
 </head>
 <body>
     <div class="container">
-    <div class="card p-5 text-bg-light shadow-lg" style="margin-top: 50px;">
-        <form action="adicionar.php" method="POST">
-        <h3 class="display-4 fw-bold lh-1 mb-3">Cadastro</h3>
+        <form action="adicionar.php" method="POST" >
+        <div class="card p-5 text-bg-dark shadow-lg">
+        <h3 class="display-5 fw-bold lh-1 mb-3 text-center">Cadastro | Curriculo</h3>
+        <br>
+        <h3 class="display-7 fw-bold lh-1 mb-3 text-center">Dados Pessoais</h3>
 
-                <label class="form-label">Foto (Apenas fotos de ate 200kb)</label>
-                <input type="file" name="txtFoto" class="form-control">
-
-                <label class="form-label">Nome Completo</label>
+                <label class="form-label">Nome completo</label>
                 <input type="name" name="nome" class="form-control" placeholder="nome">
                 
                 <div class="row">
@@ -31,7 +30,7 @@ include '../conexao.php';
                 <label for="inputPassword5" class="form-label">Senha</label>
                 <input type="password" name="senha" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
                 </div>
-    
+                </div>
                 <div class="row">
                 <div class="col-md-4">
                 <label class="form-label">Telefone</label>
@@ -48,7 +47,7 @@ include '../conexao.php';
                 </div>
 
                 <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                 <label class="form-label">Sexo</label>
                 <select name="sexo" class="form-control">
                 <option>Selecione</option>
@@ -57,11 +56,39 @@ include '../conexao.php';
                 <option value="outro">Outro</option>
                 </select>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                 <label class="form-label">Estado</label>
-                <input type="text" name="estado" class="form-control">
+        <select name="estado" class="form-control">
+        <option>Selecione...</option>
+        <option value="AC">AC</option>
+        <option value="AL">AL</option>
+        <option value="AP">AP</option>
+        <option value="AM">AM</option>
+        <option value="BA">BA</option>
+        <option value="CE">CE</option>
+        <option value="ES">ES</option>
+        <option value="DF">DF</option>
+        <option value="MA">MA</option>
+        <option value="MT">MT</option>
+        <option value="MS">MS</option>
+        <option value="MG">MG</option>
+        <option value="PA">PA</option>
+        <option value="PB">PB</option>
+        <option value="PR">PR</option>
+        <option value="PE">PE</option>
+        <option value="PI">PI</option>
+        <option value="RJ">RJ</option>
+        <option value="RN">RN</option>
+        <option value="RS">RS</option>
+        <option value="RO">RO</option>
+        <option value="RR">RR</option>
+        <option value="SC">SC</option>
+        <option value="SP">SP</option>
+        <option value="SE">SE</option>
+        <option value="TO">TO</option>
+        </select>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                 <label class="form-label">Cidade</label>
                 <input type="text" name="cidade" class="form-control">
                 </div>
@@ -69,9 +96,23 @@ include '../conexao.php';
 
                 <label class="form-label">Endereço</label>
                 <input type="text" name="endereço" class="form-control">
-
-<label class="form-label">Curso</label>
-<select name="idcurso" class="form-control">
+                
+            <br>
+            <h3 class="display-7 fw-bold lh-1 mb-3 text-center">Educação</h3>
+            <label class="form-label">Nivel de escolaridade</label>
+                <select name="edu" class="form-control">
+                <option>Selecione</option>
+                <option value="Ensino Fundamental">Ensino Fundamental</option>
+                <option value="Ensino Medio Incompleto">Ensino Medio Incompleto</option>
+                <option value="Ensino Medio Cursando">Ensino Medio Cursando</option>
+                <option value="Ensino Medio Completo">Ensino Medio Completo</option>
+                <option value="Ensino Superior Incompleto">Ensino Superior Incompleto</option>
+                <option value="Ensino Superior Cursando">Ensino Superior Cursando</option>
+                <option value="Ensino Supeior Completo">Ensino Supeior Completo</option>
+                </select>
+                
+                <label class="form-label">Ensino superior em:</label>
+                <select name="idcurso" class="form-control">
 
 <?php
 
@@ -86,11 +127,22 @@ while ($row = mysqli_fetch_array($rs))
    echo "<option value=$id_curso>$descricao</option>";   
 }
 ?>
-</select>
+                </select>
+                <label for="exampleFormControlTextarea1" class="form-label">Informações sobre sua(s) formação(ões)</label>
+                    <textarea name="infcurso" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                    <br>
+                    <h3 class="display-7 fw-bold lh-1 mb-3 text-center">Curso</h3>
+                <label for="exampleFormControlTextarea1" class="form-label">Informações do(s) curso(s) realizado(s)</label>
+                    <textarea name="curso" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                    <br>
+                    <h3 class="display-7 fw-bold lh-1 mb-3 text-center">Experiencia</h3>
+                <label for="exampleFormControlTextarea1" class="form-label">Informações da(s) sua(s) experiencia(s)</label>
+                    <textarea name="expe" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
 <br>
 <br>
-                <input name="bt" class="form-control text-white rounded-5" type="submit" value="GRAVAR" style="background-color: #712cf9;" />
+            </div>
+                <input name="bt" class="form-control text-white rounded-1" type="submit" value="OK" style="background-color: #712cf9;" />
         </form>
-        </div>
+        
     </div>
 </html>

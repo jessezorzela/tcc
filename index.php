@@ -19,7 +19,7 @@ require "conexao.php";
         color:black;
     }
     .button {
-  font-size: 15px;
+  font-size: 25px;
   text-align: center;
   cursor: pointer;
   outline: none;
@@ -42,16 +42,25 @@ require "conexao.php";
 <body>
   <div class="container">
   <div class="row p-4 align-items-center justify-content-center">
-  <div class="col-md-2"></div>
-  <div class="col-md-8">
-    <div class="card text-center text-bg-light shadow-lg" style="margin-top: 90px;">
-            <h5 class="display-6 fw-bold lh-1 mb-3">ESCOLHA</h5>
+  <div class="col-md-12">
+    <div class="card text-center text-bg-dark shadow-lg">
+    <div class="p-2"> 
+    <h5>SOBRE</h5> 
+    <p>Com a chegada das férias e de algum imprevisto, os funcionários não podem exercer seu trabalho por um período, tendo assim que ter alguém pra ficar em seu lugar.  
+    <br>Muitas empresas fazem remanejamento com funcionários que já estão na empresa que muitas vezes possuem outra atribuição.  
+    <br>Já existem profissionais específicos para resolver esse problema, esses profissionais são os Folguistas. 
+    <br>Esse site foi criado com o intuito de facilitar o encontro de Recrutadores com os Folguistas. </p> 
+
+    <h5>O QUE É UM PROFISSIONAL FOLGUISTA?</h5>
+    <p>Pessoa que trabalha nos dias de folga/férias de outra pessoa, fazendo o mesmo trabalho que ela.</p>
+    
+    </div>
+    <h5>ESCOLHA</h5>
     <div class="col-md-2"></div>
     <div class="row">
-    
-    <div class="col p-3  rounded-4" id="esquerda">
+    <div class="col p-3 shadow-lg" id="esquerda">
             <label class="form-label text-white"><h1>FOLGUISTA</h1></label>
-            <p>ESTÁ BUSCANDO EMPREGO</p>  
+            <p>BUSCANDO EMPREGO</p>  
             <img src="images/folguista.png" alt="Avatar man"><br><br>
             <div class="row">     
             <div class="col-md-12">
@@ -59,13 +68,13 @@ require "conexao.php";
             <p><a class="button btn btn-warning rounded-3" href="/tcc/folguista/login/" role="button">LOGAR</a></p>
             </div>
             <div class="col-md-12">
-            <p><a class="button btn btn-warning rounded-3" href="/tcc/folguista/cadastro.php" role="button">CADASTRAR</a></p>
+            <p><a class="button btn btn-warning rounded-3" href="/tcc/folguista/curriculo.php" role="button">CADASTRAR</a></p>
             </div>
             </div>  
     </div>    
-    <div class="col p-3  rounded-4" id="direita">
+    <div class="col p-3 shadow-lg" id="direita">
             <label class="form-label text-white"><h1>RECRUTADOR</h1></label>
-            <p>ESTÁ BUSCANDO PROFISSIONAIS</p>
+            <p>BUSCANDO PROFISSIONAIS</p>
             <img src="images/recrutador.png" alt="Avatar man"><br><br>
             <div class="row">
             <div class="col-md-12">
@@ -77,12 +86,12 @@ require "conexao.php";
             </div>
             </div>  
     </div>
-    </div>
+    </div><br>
     <div class="col-md-2"></div>
     </div>
     </div>
-    <div class="col-md-2"></div>
-    </div>
+    
+    
   </div>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>

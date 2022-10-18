@@ -12,7 +12,8 @@ $con = getConexao();
 $id_recrutador = $_POST['id_recrutador'];
 $nome = $_POST['nome'];
 $email = $_POST['email'];
-mysqli_query($con,"update usuarios set nome='$nome', email='$email' where id_recrutador=$id_recrutador");
+$senha = $_POST['senha'];
+mysqli_query($con,"update usuarios set nome='$nome', email='$email', senha=md5($senha) where id_recrutador=$id_recrutador");
 
 header("Location:../logout/");
 

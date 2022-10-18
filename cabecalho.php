@@ -1,6 +1,5 @@
 <?php
 $email = $_SESSION['email'];
-$direito = $_SESSION['direito'];
 $nome= $_SESSION['nome'];
 $id_profissional= $_SESSION['id_profissional'];
 ?>
@@ -19,31 +18,18 @@ $id_profissional= $_SESSION['id_profissional'];
     <div class="row align-items-md-stretch" style="margin-top:40px; ">
     <div class="col-md-1"></div>
     <div class="col-md-2">
-      <div class="card p-4 text-center sticky-top shadow-lg">
-      <h6 class="card-header">PROFISSIONAL</h6>
-        <img src="/tcc/gerafoto.php?id=<?php echo $id_profissional?>" class="img card-img-top" style="width:90px; height:90px">
-        <h5 class="card-title"><?php echo $nome ?></h5>
-        <p class="card-text"><?php echo $email;?><br></p>
-        <br>
-        <a class="btn text-white rounded-5" href="/tcc/folguista/perfil.php?id_profissional=<?php echo $id_profissional?>" style="background-color: #712cf9;">Perfil</a>
-        <a class="btn text-white rounded-5" href="/tcc/empresa/empresa" style="background-color: #712cf9;">Empresas</a>
-        <a class="btn text-white rounded-5" href="/tcc/vagas" style="background-color: #712cf9;">Ver Vagas</a>
-        <?php
-                      if ($direito=="1")  
-                      {
-                      ?>
-                      <a class="btn text-white rounded-5" href="/tcc/curso" style="background-color: #712cf9;">Cursos</a>
-                      <a class="btn text-white rounded-5" href="/tcc/profissao" style="background-color: #712cf9;">Profissões</a>
-                      <a class="btn text-white rounded-5" href="/tcc/escolaridade" style="background-color: #712cf9;">Escolaridade</a>
-                      <a class="btn text-white rounded-5" href="/tcc/experiencia" style="background-color: #712cf9;">Experiencia</a>
-                      <?php
-                      }
-                    ?>
+      <div class="card p-3 text-center sticky-top shadow-lg">
+      <h6>PROFISSIONAL</h6>
+      <img src="/tcc/images/folguista.png" alt="Avatar man">
+      <h6><?php echo $nome ?></h6>
+        <a class="btn text-white rounded-5" href="/tcc/folguista/perfil.php?id_profissional=<?php echo $id_profissional?>" style="background-color: #4169E1;">Perfil</a>
+        <a class="btn text-white rounded-5" href="/tcc/empresa/empresa" style="background-color: #4169E1;">Empresas</a>
+        <a class="btn text-white rounded-5" href="/tcc/vagas1" style="background-color: #4169E1;">Ver Vagas</a>    
+        <a class="btn text-white rounded-5" href="/tcc/painel1/index.php?id_profissional=<?php echo $id_profissional?>" style="background-color: #4169E1;">Aplicações</a>               
         <a class="btn text-white rounded-5" href="/tcc/logout" style="background-color: black;">Sair</a>
-      </div>  
-      <br>     
+      </div>     
     </div>
-
+<br>
 
     <div class="col-md-6">
 

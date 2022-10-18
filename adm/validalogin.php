@@ -1,0 +1,48 @@
+<?php
+session_start();
+
+include '../conexao.php';
+
+$con = getConexao();
+
+$email = $_POST['email'];
+$senha = $_POST['senha'];
+$senhamd = md5($senha);
+///echo $senhamd;
+///exit;
+
+$rs = mysqli_query($con,"select id_adm, email, nome from adm where email='$email' and senha='$senhamd'");
+if (mysqli_num_rows($rs)>0)
+{
+    $row = mysqli_fetch_array($rs);
+    $id_adm = $row['id_adm'];
+    $email = $row['email'];
+    
+    $_SESSION['id_adm'] = $id_adm;
+    $_SESSION['email'] = $email;
+    $_SESSION['nome']= $row['nome'];
+    header("Location: ../adm/menu.php");
+
+}
+else
+{
+    header("Location: /tcc/logout/");
+}
+function geralog($email)
+{
+    $ip        = $_SERVER['REMOTE_ADDR'];
+    $hora      = date("H:i:s");
+    $data      = date("Y-m-d");
+    $linha     = $ip." - ".$data." - ".$hora." - ".$email.PHP_EOL;
+
+    file_put_contents('../../temp/acessolog.txt', $linha, FILE_APPEND);
+}
+function geralogBco($email,$con)
+{
+    $ip        = $_SERVER['REMOTE_ADDR'];
+    $datahora  = date("Y-m-d H-i-s");
+
+    mysqli_query($con,"insert into acessolog (email,datahora,ip) values ('$email','$datahora','$ip')");
+
+}
+?>

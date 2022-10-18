@@ -9,8 +9,8 @@ include '../conexao.php';
 
 $con = getConexao();
 
-$id_curso = $_GET['id_curso'];
+$id_vaga = $_GET['id_vaga'];
 
-mysqli_query($con,"delete from cursos where id_curso=$id_curso");
+mysqli_query($con,"delete from vaga where id_vaga=$id_vaga");
 
-header("location: index.php");
+header("location: /tcc/folguista/");

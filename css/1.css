@@ -6,7 +6,7 @@ body {
     border-radius: 1.875rem;
 }
 .btn {
-    margin-bottom: 1rem;
+    margin-bottom: 5px; /* 1rem */    
     letter-spacing: -.025rem;
     box-shadow: 0 4px 7px -1pxrgba(0,0,0,.11),0 2px 4px -1pxrgba(0,0,0,.07);
     background-size: 150%;
@@ -43,4 +43,13 @@ th{
 .card-footer{
     background-color: white;
     
+}
+
+.btn-custom{
+    padding: 1px 15px 3px 2px;
+    border-radius: 58px;
+}
+.btn-icon{
+    padding: 8px;
+    background: #ffffff;
 }

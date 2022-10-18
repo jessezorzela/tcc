@@ -4,14 +4,14 @@ fieldset {
 
 }
 #esquerda {
-    background-color: #8A2BE2;
+    background-color: #87CEEB;
 }
 #direita {
-    background-color: #663399;
+    background-color: #4169E1;
 }
 
 img {
-    height: 100px;
+    height: 150px;
     border-radius: 50%;
     margin: 10px auto 0;
 }

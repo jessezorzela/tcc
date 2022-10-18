@@ -4,7 +4,7 @@
         <div class="card-body">
         <h5 class="card-title"></h5>
         <p class="card-text">© 2022. Jessé Zorzela. Todos direitos reservados.</p>
-        <a class="btn text-white rounded-5" href="#" style="background-color: #712cf9;">Ir ao topo</a>
+        <a class="btn text-white rounded-5" href="#" style="background-color: #4169E1;">Ir ao topo</a>
         </div>
       </div>       
     </div>

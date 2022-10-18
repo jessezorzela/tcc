@@ -11,25 +11,22 @@ $senhamd = md5($senha);
 ///echo $senhamd;
 ///exit;
 
-$rs = mysqli_query($con,"select id_recrutador, email, nome, direito from usuarios where email='$email' and senha='$senhamd'");
+$rs = mysqli_query($con,"select id_recrutador, email, nome from usuarios where email='$email' and senha='$senhamd'");
 if (mysqli_num_rows($rs)>0)
 {
     $row = mysqli_fetch_array($rs);
     $id_recrutador = $row['id_recrutador'];
     $email = $row['email'];
-    $direito = $row['direito'];
-    
     
     $_SESSION['id_recrutador'] = $id_recrutador;
     $_SESSION['email'] = $email;
-    $_SESSION['direito'] = $direito;
     $_SESSION['nome']= $row['nome'];
     header("Location: ../../folguista/");
 
 }
 else
 {
-    header("Location: ../../logout/");
+    header("Location: /tcc/recrutador/login");
 }
 function geralog($email)
 {

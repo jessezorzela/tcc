@@ -6,7 +6,6 @@ if (!isset($_SESSION['id_recrutador']))
      exit;
 }
 $email = $_SESSION['email'];
-$direito = $_SESSION['direito'];
 require '../cabecalho1.php';
 require '../conexao.php';
 ?>
@@ -22,7 +21,7 @@ require '../conexao.php';
           </div>
           <br>
           <div class="col-md-2">
-          <button name="bt" class="form-control text-white rounded-4" type="submit" style="background-color: #712cf9;">
+          <button name="bt" class="form-control text-white rounded-4" type="submit" style="background-color: #4169E1;">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
   <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
 </svg></button>
@@ -32,16 +31,12 @@ require '../conexao.php';
     </form>
   </div>
 </div>
-
-<h3 class="text-center">FOLGUISTAS</h3>
-
-<div class="card p-3 border rounded-3 shadow-lg">
 <div class="row">
 <div class="col-md-6">
 </div>
 </div>
-  
-  <div class="row row-cols-1 row-cols-md-3 g-4">
+<h3 class="text-center">FOLGUISTAS</h3>
+  <div class="row">
 <?php
     $pchave = "";
     if ($_POST) {$pchave = $_POST['pchave'];}
@@ -68,50 +63,23 @@ while ($row = mysqli_fetch_array($rs)) {
       $descricao = $row['descricao'];
 
       echo "
-    <div class='col'>
-    <div class='card h-100 text-center rounded-3'>  
-    <img src='/tcc/folguista/gerafoto.php?id_profissional=$id_profissional' class='img card-img-top' style='width:80px; height:80px'>
+    <div class='col-md-12'>
+    <div class='card h-100 text-center rounded-3 shadow-lg'>  
     <div class='card-body'>
     <div class='card-text'>
-        <h5><small class='text-muted'>#$id_profissional</small> $nom</h5>
+        <h5>$nom</h5>
     </div>
         <p class='card-text'><small><span class='d-inline-block text-truncate' style='max-wid_profissionalth: 160px;'>$descricao</span></small></p>
     </div>
     <div class='card-footer'>
-        <a class='btn text-white rounded-5' href='/tcc/folguista/ver.php?id_profissional=$id_profissional' style='background-color: #712cf9;' target='_blank' rel='noopener noreferrer'>Ver Curriculo</a>
+        <a class='btn text-white rounded-5' href='/tcc/folguista/ver.php?id_profissional=$id_profissional' style='background-color: #4169E1;' target='_blank' rel='noopener noreferrer'>Ver Curriculo</a>
     </div>
     </div>
     </div>
      ";
-
-if ($direito =="1") {
-        echo "
-        <div class='col-md-12 align-self-center'>
-        <div class='card p-1 text-center bg-light rounded-3'>
-        <button type='button' class='btn btn-danger rounded-5' data-bs-toggle='modal' data-bs-target='#exampleModal'>EXCLUIR</button>
-
-      <div class='modal fade' id='exampleModal' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
-  <div class='modal-dialog'>
-    <div class='modal-content'>
-      <div class='modal-header'>
-        <h5 class='modal-title'>Deseja excluir curriculo?</h5>
-        <button type='button' class='btn-close rounded-5' data-bs-dismiss='modal' aria-label='Close'></button>
-      </div>
-      <div class='modal-footer'>
-        <button type='button' class='btn btn-danger rounded-5' data-bs-dismiss='modal'>NÃO</button>
-        <a class='btn btn-success rounded-5' href='/tcc/folguista/excluir.php?id_profissional=$id_profissional' role='button'>SIM</a>
-      </div>
-    </div>
-  </div>
-</div>
-        <a class='btn btn-warning text-white rounded-5' href='/tcc/folguista/editarcadastro.php?id_profissional=$id_profissional'role='button'>EDITAR</a>
-        </div>
-        </div>
-        ";
-}
 }
 ?>
   </div>
-</div>
+
 </div>
 <?php require "../rodape.php"; ?>

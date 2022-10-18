@@ -8,13 +8,13 @@ if (!isset($_SESSION['id_recrutador']))
 include '../conexao.php';
 
 $con = getConexao();
-
-$descricao = $_POST['descricao'];
-
-$sql="insert into cursos (descricao) values ('$descricao')";
-echo $sql;
+$idrecrutador = $_POST['idrecrutador'];
+$nome = $_POST['nome'];
+$idempresa = $_POST['idempresa'];
+$idprofissao = $_POST['idprofissao'];
+$descricaoo = $_POST['descricaoo'];
+$sql = "INSERT INTO vaga (idrecrutador, nome, idempresa, idprofissao, descricaoo) VALUES ('$idrecrutador', '$nome', '$idempresa', '$idprofissao', '$descricaoo')";
 mysqli_query($con,$sql);
-
-header("Location: index.php");
+header("Location: /tcc/empresa/");
 
 ?>

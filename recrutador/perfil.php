@@ -24,13 +24,12 @@ while ($row = mysqli_fetch_array($rs))
 ?>
 <div class="col-md-12 align-self-center">
 <div class="card p-3 border rounded-3 shadow-lg">
-    <h3>Dados Pessoais</h3>
-    <p class="form-label"><b>ID: #</b><?php echo $id_recrutador?></p>
+    <h3>Perfil</h3>
     <label class="form-label"> <b>Nome: </b><?php echo $nome?></label>
     <label class="form-label"> <b>Email: </b><?php echo $email?></label>
 
-    <br><a class="btn text-white rounded-5" href="/tcc/recrutador/editarrecrutador.php?id_recrutador=<?php echo $id_recrutador?>" style="background-color: #712cf9;">Editar Perfil</a>
-    
+    <br><a class="btn text-white rounded-5" href="/tcc/recrutador/editarrecrutador.php?id_recrutador=<?php echo $id_recrutador?>" style="background-color: #4169E1;">Editar Perfil</a>
+    <a class="btn text-white rounded-5" href="/tcc/recrutador/excluir.php?id_recrutador=<?php echo $id_recrutador?>" style="background-color: #FF0000;">Excluir Perfil</a>
     </div>
     </div>
 </div>

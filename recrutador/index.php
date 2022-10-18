@@ -6,7 +6,6 @@ if (!isset($_SESSION['id_profissional']))
      exit;
 }
 $email = $_SESSION['email'];
-$direito = $_SESSION['direito'];
 require '../cabecalho.php';
 require '../conexao.php';
 ?>
@@ -23,7 +22,7 @@ require '../conexao.php';
           </div>
           <br><br>
           <div class="col-md-12">
-          <input name="bt" class="form-control text-white rounded-5" type="submit" value="Buscar" style="background-color: #712cf9;" />
+          <input name="bt" class="form-control text-white rounded-5" type="submit" value="Buscar" style="background-color: #4169E1;" />
           </div>
         </div>
       </form>
@@ -68,12 +67,11 @@ while ($row = mysqli_fetch_array($rs)) {
     <div class='card p-3 text-bg-light rounded-3'>  
     <div class='row'>
     <div class='col'>
-    <img src='/tcc/recrutador/gerafoto1.php?id_recrutador=$id_recrutador' class='img card-img-top' style='width:80px; height:80px'>
     </div>
     <div class='col-md-9'>
-        <h5><small class='text-muted'>#$id_recrutador</small> $nom</h5>
+        <h5>$nom</h5>
         <p class='card-text'><small><span class='d-inline-block text-truncate' style='max-wid_recrutadorth: 160px;'>$nomeemp</span></small></p>
-        <a class='btn text-white rounded-5' href='/tcc/folguista/ver.php?id_recrutador=$id_recrutador' style='background-color: #712cf9;'>Ver Curriculo</a>
+        <a class='btn text-white rounded-5' href='/tcc/folguista/ver.php?id_recrutador=$id_recrutador' style='background-color: #4169E1;'>Ver Curriculo</a>
         </div>
     </div>
     </div>

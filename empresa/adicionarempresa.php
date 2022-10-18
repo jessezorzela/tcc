@@ -12,7 +12,7 @@ include '../conexao.php';
 </head> 
 
 
-<div class="card p-3 text-bg-light shadow-lg rounded-3">
+<div class="card p-3 shadow-lg rounded-3">
 <form method="post" action="adicionar.php"> 
 <h3 class="text-center">Empresa</h3>
 
@@ -41,6 +41,6 @@ while ($row = mysqli_fetch_array($rs))
 <label class="form-label">Cnpj</label>
     <input type="name" name="cnpj" class="form-control">
 <br>
-<input name="bt" class="form-control text-white rounded-5" type="submit" value="GRAVAR" style="background-color: #712cf9;" />
+<input name="bt" class="form-control text-white rounded-5" type="submit" value="GRAVAR" style="background-color: #4169E1;" />
 </form> 
 </div>

@@ -32,10 +32,10 @@ include '../../conexao.php';
               </div>
              
               <br><br>
-              <input name="bt" class="form-control text-white rounded-5" type="submit" value="LOGAR" style="background-color: #712cf9;" />
+              <input name="bt" class="form-control text-white rounded-5" type="submit" value="LOGAR" style="background-color: #4169E1;" />
             </form>
             <br>
-            <a class="btn text-white rounded-5" href="../../recrutador/cadastro.php" style="background-color: #712cf9; width:100%;">CADASTRAR-SE</a>
+            <a class="btn text-white rounded-5" href="../../recrutador/cadastro.php" style="background-color: #4169E1; width:100%;">CADASTRAR-SE</a>
           </div>
         </div>
         <div class="col-md-2"></div>

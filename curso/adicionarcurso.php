@@ -1,13 +1,13 @@
 <?php
 session_start();
-if (!isset($_SESSION['id_profissional']))
+if (!isset($_SESSION['id_adm']))
 {
      header("Location: ../logout");
      exit;
 }
 include '../conexao.php';
 ?>
-<?php require "../cabecalho.php";?>
+<?php require "../cabecalho2.php";?>
 <head> 
 <title>Incluir novo curso</title> 
 </head> 
